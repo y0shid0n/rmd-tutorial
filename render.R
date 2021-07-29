@@ -36,7 +36,7 @@ map(transpose(df_params), myfunc)
 myfunc2 <- function(hoge, fuga, piyo) {
   render("./sample.Rmd"
          , output_format = "html_document"
-         , output_file = paste0("./sample_", arg01, ".html")
+         , output_file = paste0("./sample_", hoge, ".html")
          , params = list(arg01=hoge, arg02=fuga, arg03=piyo)
   )
 }
