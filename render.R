@@ -31,3 +31,14 @@ myfunc <- function(l) {
 
 # transpose(data.frame)はlist of rowsを返す
 map(transpose(df_params), myfunc)
+
+# pmapを使うやりかた
+myfunc2 <- function(hoge, fuga, piyo) {
+  render("./sample.Rmd"
+         , output_format = "html_document"
+         , output_file = paste0("./sample_", arg01, ".html")
+         , params = list(arg01=hoge, arg02=fuga, arg03=piyo)
+  )
+}
+
+pmap(df_params, myfunc2)
