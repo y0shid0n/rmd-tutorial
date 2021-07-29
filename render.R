@@ -26,7 +26,7 @@ myfunc <- function(l) {
          , output_format = "html_document"
          , output_file = paste0("./sample_", arg01, ".html")
          , params = list(arg01=arg01, arg02=arg02, arg03=arg03)
-  )
+         )
 }
 
 # transpose(data.frame)はlist of rowsを返す
